@@ -1,0 +1,15 @@
+C:\Users\ND SOFT\Desktop\SS Shinde\7 Day Learning C#\csharp-learning-path\Day01-Fundamentals\Programs\ReverseString\bin\Debug\net9.0\ReverseString.exe
+C:\Users\ND SOFT\Desktop\SS Shinde\7 Day Learning C#\csharp-learning-path\Day01-Fundamentals\Programs\ReverseString\bin\Debug\net9.0\ReverseString.deps.json
+C:\Users\ND SOFT\Desktop\SS Shinde\7 Day Learning C#\csharp-learning-path\Day01-Fundamentals\Programs\ReverseString\bin\Debug\net9.0\ReverseString.runtimeconfig.json
+C:\Users\ND SOFT\Desktop\SS Shinde\7 Day Learning C#\csharp-learning-path\Day01-Fundamentals\Programs\ReverseString\bin\Debug\net9.0\ReverseString.dll
+C:\Users\ND SOFT\Desktop\SS Shinde\7 Day Learning C#\csharp-learning-path\Day01-Fundamentals\Programs\ReverseString\bin\Debug\net9.0\ReverseString.pdb
+C:\Users\ND SOFT\Desktop\SS Shinde\7 Day Learning C#\csharp-learning-path\Day01-Fundamentals\Programs\ReverseString\obj\Debug\net9.0\ReverseString.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ND SOFT\Desktop\SS Shinde\7 Day Learning C#\csharp-learning-path\Day01-Fundamentals\Programs\ReverseString\obj\Debug\net9.0\ReverseString.AssemblyInfoInputs.cache
+C:\Users\ND SOFT\Desktop\SS Shinde\7 Day Learning C#\csharp-learning-path\Day01-Fundamentals\Programs\ReverseString\obj\Debug\net9.0\ReverseString.AssemblyInfo.cs
+C:\Users\ND SOFT\Desktop\SS Shinde\7 Day Learning C#\csharp-learning-path\Day01-Fundamentals\Programs\ReverseString\obj\Debug\net9.0\ReverseString.csproj.CoreCompileInputs.cache
+C:\Users\ND SOFT\Desktop\SS Shinde\7 Day Learning C#\csharp-learning-path\Day01-Fundamentals\Programs\ReverseString\obj\Debug\net9.0\ReverseString.sourcelink.json
+C:\Users\ND SOFT\Desktop\SS Shinde\7 Day Learning C#\csharp-learning-path\Day01-Fundamentals\Programs\ReverseString\obj\Debug\net9.0\ReverseString.dll
+C:\Users\ND SOFT\Desktop\SS Shinde\7 Day Learning C#\csharp-learning-path\Day01-Fundamentals\Programs\ReverseString\obj\Debug\net9.0\refint\ReverseString.dll
+C:\Users\ND SOFT\Desktop\SS Shinde\7 Day Learning C#\csharp-learning-path\Day01-Fundamentals\Programs\ReverseString\obj\Debug\net9.0\ReverseString.pdb
+C:\Users\ND SOFT\Desktop\SS Shinde\7 Day Learning C#\csharp-learning-path\Day01-Fundamentals\Programs\ReverseString\obj\Debug\net9.0\ReverseString.genruntimeconfig.cache
+C:\Users\ND SOFT\Desktop\SS Shinde\7 Day Learning C#\csharp-learning-path\Day01-Fundamentals\Programs\ReverseString\obj\Debug\net9.0\ref\ReverseString.dll
