@@ -67,8 +67,54 @@ StringBuilder: mutable - modifies an internal buffer in place, faster for loops.
 -Convert.ToInt32("123")- handles null (returns 0),converts between more types.
 -int.TryParse("123", out int result) - safest ,retruns true/false instead of threwing.
 
-
-
+`````````````````````````````````````````````````````````````````
+Git & GitHub Cheat Sheet (1 Page)
+`````````````````````````````````````````````````````````````````
+Setup
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+`````````````````````````````````
+Start Repository
+git init
+git clone <repo-url>
+`````````````````````````````````
+Basic Workflow
+git status
+git add .
+git commit -m "message"
+``````````````````````````````````
+Branching
+git branch
+git checkout -b feature
+git merge feature
+`````````````````````````````````
+Remote
+git remote add origin <url>
+git push -u origin main
+git pull
+````````````````````````````````
+History
+git log
+git diff
+````````````````````````````````
+Undo
+git restore file
+git reset HEAD file
+git revert <commit>
+``````````````````````````````````
+Stash
+git stash
+git stash pop
+````````````````````````````````
+Tag
+git tag v1.0
+git push origin v1.0
+`````````````````````````````````
+.gitignore
+bin/
+obj/
+.vs/
+*.log
 
 
 
