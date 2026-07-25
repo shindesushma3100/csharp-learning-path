@@ -1,4 +1,6 @@
-﻿Console.Write("Enter a string: ");
+﻿using System.Runtime.CompilerServices;
+
+Console.Write("Enter a string: ");
 string input=Console.ReadLine();
 
 //Count vowels
@@ -12,7 +14,13 @@ foreach(char c in input)
     }
 }
 Console.WriteLine($"Number of vowels: {count}");
-//Count word
+//Count character
 
 int cout2 =input.ToString().Length;
-Console.WriteLine($"Number of count of {input} is {cout2}");
+Console.WriteLine($"Number of count of characer of {input} is {cout2}");
+
+//Count Word
+Console.Write("Enter a sentence: ");
+string sentence= Console.ReadLine();
+string[]words=sentence.Split(' ',StringSplitOptions.RemoveEmptyEntries);
+Console.WriteLine($"Number of words: {words.Length}");
