@@ -95,7 +95,8 @@ class Employee
 
 Interview trap: "Can you have multiple destructors?" → No. Only one per class, and it can't be overloaded (unlike constructors).
 
-----------------------------------------4. Inheritance
+----------------------------------------
+4. Inheritance
 
 A class (child/derived) acquires properties and behavior of another class (parent/base). Achieved using : in C#.
 
@@ -171,3 +172,138 @@ Signature	Must differ	Must be same
 Keyword	None needed	virtual + override
 Class	Same class	Base & derived class
 Inheritance needed?	No	Yes
+-------------------------------------------------------
+6.Encapsulation
+Wrapping data (feilds) and the methods that operate on them into a single unit(class),while restricting direct access to the internal state. Done using access modifies + properties.
+C#
+class BankAccount
+{
+    private double balance; //hidden from outside
+
+    public double GetBalance() => balance;
+
+    public void Deposit(double amount)
+    {
+        if (amount > 0) balance += amount;
+    }
+}
+
+Nobody outside the class can do account.balance = -5000; directly -- they're forced to go thrugh Deposit(), which can validate input. This is the real point of encapsulation: controlled access ,not just "hiding for hiding's sake."
+
+Properties are C#'s cleaner syntax for this pattern:
+C#
+
+class Employee
+{
+    private double salary;
+    public double Salary
+    {
+        get{  return salary; }
+        set { if(value > 0) salary = value;}
+    }
+}
+
+Intervire trap: "Isn't public property with get/set the same as a public field?" ->No -a property can add validation logic (as above) and can later change internally without breaking code that uses it. A public field can't do either.
+-----------------------------------------------------
+7.Abstraction
+Hiding implementation details and exposing only what's necessary.Achieved via abstract classes and interfaces.
+
+C#
+abstract class Shape
+{
+    public abstract double GetArea(); //no body - must be implemented by derived class
+    public void Display() => Console.WriteLine("This is a shape");
+}
+
+class Circle : Shape
+{
+    publice double Radius;
+    public override double GetArea() => Math.PI * Radius * Radius;
+}
+
+* Cannot be instantiated direcrly (new Shape() is illegel)
+* Can mix abstract methods(no body) with regular,fully-implemented methods
+* A class can inherit from only one abstract class(single inheritance rule still applies)
+
+
+8.Interface
+
+C#
+ interface IShape
+ {
+    double GetArea(); //no body,no access modifier -Implicitly public
+
+ }
+
+ class Square :Ishape
+ {
+    public double Side;
+    publc double GetArea()=> Side * Side;
+ } 
+
+ * Traditionally, interfaces couldn't have any implementation at all (pre-C# 8)- just method signatures
+ *A class can implement multiple interfaces - this is how C# gets around not supporting multiple class inheritance
+ *All members are implicitly public  
+
+// Abstract class vs Interface — the classic comparison question
+Aspect	Abstract Class	Interface
+Implementation	Can have both abstract and concrete methods	Traditionally none (default methods allowed since C# 8, but rarely the expected answer)
+Fields	Can have fields	Cannot have fields
+Inheritance	Single only	Multiple allowed
+Constructors	Can have one	Cannot have one
+When to use	"IS-A" relationship with shared code	"CAN-DO" capability contract
+
+ Interview trap: "When would you use an abstract class over an interface?" → When derived classes share common, reusable implementation (not just a method signature) — e.g., all Shapes need a Display() method with identical logic. Use an interface when unrelated classes need to guarantee the same capability (e.g., IComparable, IDisposable).
+--------------------------------------------------------------------------
+
+9.sealed keyword
+ Prevents class from being inherited further,or a method from being overridden further.
+
+ C#
+ sealed class FinalClass
+ {
+    //cannot be inherited by any other class
+ }
+ class Animal
+ {
+    public virtual void Sound() => Console.WriteLine("...");
+
+ }
+ class Dog : Animal
+ {
+    public sealed override void Sound() => Console.WriteLine("Bark"); //can't be overridden further
+ }
+ Interview trap: "Why would you seal a class?" → Performance (compiler can optimize since it knows no override exists) and design intent — locking down a class you don't want extended, like a security-sensitive utility class.
+ ----------------------------------------------------
+ 10 this vs base keyword
+ * this refers to the current object instance - used to disambiguate fields from parameters, or to call another constructor in the same class.
+ * base refers to the parent class - used to call the parent's constructor or a parent's method that was overridden.
+
+ C#
+
+ class Animal
+{
+    public Animal() => Console.WriteLine("Animal constructor");
+    public virtual void Sound() => Console.WriteLine("Some sound");
+}
+
+class Dog : Animal
+{
+    public Dog() : base() => Console.WriteLine("Dog constructor"); // calls Animal's constructor first
+    public override void Sound()
+    {
+        base.Sound();   // calls Animal's version first
+        Console.WriteLine("Bark");
+    }
+}
+
+Interview trap: "Does the base class constructor run automatically?" → Yes — even without writing : base() explicitly, the parameterless base constructor runs first, before the derived class's constructor body executes.
+---------------------------------------------------------
+10.Access Modifiers
+public - Anywhere
+private - Only within the same class
+protected - Same class + derived classes
+internal - Same assembly/ project only
+protected internal - Same assembly OR derived classes (even in other assemblies)
+private protected -same assembly AND derived classes only
+ 
