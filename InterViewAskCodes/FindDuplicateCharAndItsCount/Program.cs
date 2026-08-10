@@ -1,5 +1,5 @@
 ﻿
-
+//Using LINQ
 using System.Linq;
 
 // Console.Write("Enter Name :");
@@ -13,3 +13,19 @@ foreach(var c in duplicate)
 {
     Console.WriteLine($"{c.Key} = {c.Count()}");
 }
+
+//Usig HasSet<>
+HashSet<char>seen=new HashSet<char>();
+HashSet<char>duplicates=new HashSet<char>();
+
+foreach(char ch in name)
+{
+    if (!seen.Add(ch))
+    {
+        duplicates.Add(ch);
+    }
+
+}
+        Console.WriteLine($"Name :{name.ToUpper()}");
+        Console.WriteLine("Duplicate Charaters: "+ string.Join(", ",duplicates));
+
